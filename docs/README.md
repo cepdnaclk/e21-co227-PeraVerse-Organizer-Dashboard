@@ -147,13 +147,26 @@ This enhances organizer efficiency, improves coordination, and ensures smooth ma
      ADMIN_PASSWORD=”your-app-password for ADMIN_EMAIL”
      ADMIN_NOTIFY_EMAIL=”Admin’s email(this email receives the approval request)
      ```
-    
-    
-   
 
-   
-  
 
+4. **Running the System Locally**
+
+    **a) Frontend**
+    ```bash
+    cd frontend
+    npm run dev
+    ```
+
+    **b) Backend**
+    ``` bash
+    # Websocket for kiosk : first you have to run the web socket
+    cd backend/backend/tools
+    nodemon ws-server.js
+    
+    # Then go inside each service and run the follwing command inside the directory where the index.js file is situated
+    nodemon index
+
+    
 ## Links
 
 - [Project Repository](https://github.com/cepdnaclk/e21-co227-PeraVerse-Organizer-Dashboard)
